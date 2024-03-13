@@ -38,6 +38,8 @@ form.addEventListener("submit", function (e) {
 
     // Updating the paragraph content
     paragraph.innerHTML = `Available tickets: ${available_tickets}`;
+    paragraph.style.color = "green";
+
 
     if (available_tickets == 0) {
       paragraph.innerHTML = ` All tickets were sold`;
