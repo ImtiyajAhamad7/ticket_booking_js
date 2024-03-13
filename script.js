@@ -28,6 +28,11 @@ form.addEventListener("submit", function (e) {
   value = document.getElementById("ticket").value;
 
   if (available_tickets >= value) {
+    if(value<1) {
+      paragraph.innerHTML = `Please enter a valid number`;
+      paragraph.style.color = "red";
+      return;
+    }
     // Calculating available tickets
     available_tickets = available_tickets - value;
 
